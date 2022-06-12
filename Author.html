@@ -23,7 +23,31 @@
       <p>Автор сайту - Ларченко Сергій Васильович, студент Українського державного університету науки і технологій, вчиться на другому курсі в групі КС2011. На спеціальності 123 Комп'ютерна інженерія. У вільний час займається грою в відеоігри та програмуванням на мові C# та C++.<br><br>Електронна адреса: sergiy.larchenko@i.ua<br><br>Контактний номер телефону: +380 98 271 11 35</p>
       <img src="images/Author_photo.png" alt="Author_photo.png">
    </div>
+   <div style="border:black; border-width:5px; border-style:solid; width: 50%; margin: 0 35% 0 15%;">
+     <div class="text">
+      <p id = "info">Здесь отобразится выбранная информация...</p>
+     </div>
+   </div>
+   <div style="width: 50%; margin: 50px 35% 0 15%; display: flex; justify-content: space-around; padding-bottom: 50px;">
+   <button type="button" onclick="loadEmail()">Електронная почта</button>
+   <button type="button" onclick="loadNumber()">Номер телефона</button>
+ </div>
   </div>
+
+<script>
+function loadEmail() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("info").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "/Email.txt", true);
+  xhttp.send();
+}
+</script>
+
 </body>
 <footer>
 <div class="bottom">
