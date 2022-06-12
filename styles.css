@@ -80,3 +80,8 @@ p
 
 	align-items:center;
 }
+
+button
+{
+	height: 40px;
+}
