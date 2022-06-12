@@ -1,0 +1,8 @@
+User-agent: Googlebot
+Disallow: /Author.html
+Disallow: /images/Author_photo.png
+
+User-agent: *
+Allow: /
+
+Sitemap: https://serega3453.github.io//sitemap.xml
