@@ -35,8 +35,21 @@
     <button style="margin: 10px" onclick="alert(`Clicked inline JS button`); document.getElementById(`status`).innerHTML = `You pressed first button!`;">Inline JS</button>
     <button id="prop" style="margin: 10px">Property JS</button>
     <button id="listened_button" style="margin: 10px">Listening JS</button>
+    <button class="jbutton" id="jquerry_button" style="margin: 10px">JQuerry</button>
+    <h4 style="margin: 5px; text-align: center;">Before JQuerry.</h4>
+    <h4 style="margin: 5px; text-align: center; padding-bottom: 10px;">Still before JQuerry...</h4>
     <p id = "status" style="text-align: center;"></p>
     </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script>
+        $(document).ready(function()
+        {
+            $(".jbutton").click(function()
+          {
+            $("h4").html("Changed with JQuerry!");
+          });
+        });
+      </script>>
       <script src="JS.js"></script>
   </div>
 </body>
